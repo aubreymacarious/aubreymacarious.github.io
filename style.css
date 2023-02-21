@@ -83,6 +83,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+    color: inherit;
+}
+
 .bg-image {
   bottom: 0;
   position: absolute;
@@ -143,9 +147,10 @@ body {
 }
 
 .bg-image img {
-  margin-right: -90px;
-  max-width: 100%;
-  z-index: 0;
+    margin-right: -20px;
+    max-width: 100%;
+    z-index: 0;
+    height: 73%;
 }
 
 @media all and (min-width: 1440px) {
@@ -156,9 +161,11 @@ body {
 
 @media all and (max-width: 930px) {
   .bg-image img {
-    margin-right: -140px;
-  }
+    margin-right: -182px;
+    height: 61%;
 }
+}
+
 
 .privacy .bg-image {
   display: none;
@@ -282,6 +289,12 @@ body {
   padding-left: 20px;
 }
 
+a.read-more{
+    color: #ed1c24;
+    font-weight: 600;
+
+}
+
 footer.site-footer {
   background-color: #e9eaea;
   background-image: url(../img/footer-logo_2x.png);
@@ -380,7 +393,7 @@ h1 a:hover {
   font: 0 / 0 a;
   text-shadow: none;
   background: url(../img/logo_2x.png) 0 0 no-repeat;
-  background-size: 100px 24px;
+  background-size: 189px 52px;
   height: 24px;
   left: 36px;
   position: absolute;
@@ -405,6 +418,13 @@ h1 a:hover {
 
 .lt-ie9 #logo {
   background-image: url(../img/logo_1x.png);
+}
+
+.heading{
+    font-weight: 700;
+    color: #3f3f3f;
+    font-size: 30px;
+    margin-left: 5px;
 }
 
 #gicon {
@@ -445,14 +465,14 @@ h1 a:hover {
   }
 }
 
-#forgoogle {
+#forclottware {
   background-repeat: no-repeat;
   background-position: 0 0;
   color: transparent;
   font: 0 / 0 a;
   text-shadow: none;
-  background: url(../img/forgoogle-large_2x.png) 0 0 no-repeat;
-  background-size: 260px 49px;
+  background: url(../img/logo-words.png) 0 0 no-repeat;
+  background-size: 183px 51px;
   height: 49px;
   margin-bottom: 21px;
   position: relative;
