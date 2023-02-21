@@ -83,8 +83,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: inherit;
+a{
+    color: inherit;
 }
 
 .bg-image {
@@ -147,10 +147,10 @@ a {
 }
 
 .bg-image img {
-  margin-right: -20px;
-  max-width: 100%;
-  z-index: 0;
-  height: 73%;
+    margin-right: -20px;
+    max-width: 100%;
+    z-index: 0;
+    height: 73%;
 }
 
 @media all and (min-width: 1440px) {
@@ -163,8 +163,9 @@ a {
   .bg-image img {
     margin-right: -182px;
     height: 29%;
-  }
 }
+}
+
 
 .privacy .bg-image {
   display: none;
@@ -288,9 +289,10 @@ a {
   padding-left: 20px;
 }
 
-a.read-more {
-  color: #ed1c24;
-  font-weight: 600;
+a.read-more{
+    color: #ed1c24;
+    font-weight: 600;
+
 }
 
 footer.site-footer {
@@ -400,14 +402,14 @@ h1 a:hover {
   z-index: 999;
 }
 
-.logo {
-  height: 24px;
-  left: 36px;
-  position: absolute;
-  top: 27px;
-  width: 196px;
-  z-index: 999;
-  font-family: 'Fjalla One', sans-serif;
+.logo{
+    height: 24px;
+    left: 36px;
+    position: absolute;
+    top: 27px;
+    width: 196px;
+    z-index: 999;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 #logo img {
@@ -418,11 +420,11 @@ h1 a:hover {
   background-image: url(../img/logo_1x.png);
 }
 
-.heading {
-  font-weight: 700;
-  color: #3f3f3f;
-  font-size: 30px;
-  margin-left: 5px;
+.heading{
+    font-weight: 700;
+    color: #3f3f3f;
+    font-size: 30px;
+    margin-left: 5px;
 }
 
 #gicon {
