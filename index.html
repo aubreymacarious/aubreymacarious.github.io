@@ -237,6 +237,14 @@
             </div>
         </div>
     </section>
+    <section id="products">
+        <span class="h1">
+            <a href="#">Templates</a>
+        </span>
+        <p>Discover easy to customize professional themes, templates & CMS products, plugins, PHP, Bootstrap & more for any projects</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4 mt-3" id="templates">
+        </div>
+    </section>
     <section id="ads">
         <span class="h1">
             Crafting Your Online Presence.
@@ -265,13 +273,48 @@
             <p>&copy; <span id="currentYear"></span> Aubrey Macarious. All rights reserved.</p>
         </div>
     </section>
-    <script>
+
+<script>
         // Get the current year
-const currentYear = new Date().getFullYear();
+        const currentYear = new Date().getFullYear();
+        // Set the current year in the HTML
+        document.getElementById('currentYear').textContent = currentYear;
+</script>
 
-// Set the current year in the HTML
-document.getElementById('currentYear').textContent = currentYear;
+<script>
+    $(document).ready(function() {
+        $.getJSON("products.json", function(data) {
+        var productsContainer = $("#templates");
 
-    </script>
+        data.forEach(function(product) {
+        var productElement = $("<div class='col mb-3 mb-sm-0'>");
+
+        var productCard = $("<div class='card shop-card-v h-100'>");
+        productElement.append(productCard);   
+
+        var imageElement = $("<img class='card-img-top'>").attr("src", product.img_url);
+        productCard.append(imageElement);
+
+        var cardBody = $("<div class='card-body product-card-body'>");
+        productCard.append(cardBody);
+
+
+        cardBody.append($("<h5 class='card-title'>").text(product.name));
+
+        var cardAction = $("<div class='shop-card-action p-3'>");
+        productCard.append(cardAction);
+        cardAction.append($("<span class='ori-price'>").text(product.price));
+
+
+        var productLink = $("<a class='stretched-link'>").attr("href", 'template.html');
+        var demoLink = $("<a class='btn btn-primary btn-shop-demo' target='_blank'>").attr("href", product.live_demo_url).text("Live Demo");
+        cardAction.append(demoLink);
+        productCard.prepend(productLink);
+
+        productsContainer.append(productElement);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
