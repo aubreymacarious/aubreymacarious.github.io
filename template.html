@@ -58,27 +58,23 @@
             </div>
         </header>
 <section id="themes">
-    <div class="content index pb-3 ">
-        <h1 class="posttitle p-name mt-0 mb-3" itemprop="name headline">
-            Learning to hack
-        </h1>
-        <div class="row row-cols-1 row-cols-md-2 g-1">
-            <div class="col" style="width: 65%;">
-              <div class="card">
-                <img src="https://s.tmimgcdn.com/scr/400x250/341300/b-corporate-business-coach-wordpress-theme_341316-original.png" class="card-img" alt="...">
-              </div>
-            </div>
-            <div class="col" style="width:35%;">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-
+<div class="content index py4 pt-0">
+    <article class="post h-entry">
+        <header>
+            <h1 class="posttitle p-name" itemprop="name headline">
+            </h1>
+          </header>
+          <div class="content e-content mt-4">
+            <p><img src="" class="template-image" alt=""></p>
+            <h2 class="pricing"><a href="#" class="headerlink" title="Static"></a>Static pricing - <span id="static-price" style="color: #c9cacc;"></span></h2>
+            <p class="pricing">This package includes the HTML, CSS, and JavaScript files, providing the essential foundation for your website.</p>
+            <h2 class="pricing"><a href="#" class="headerlink" title="Dynamic"></a>Dynamic pricing - <span id="dynamic-price" style="color: #c9cacc;"></span></h2>
+            <p class="pricing">With this option, you'll get everything in the static package, plus advanced features like an admin dashboard, working forms, and more, giving your site extra functionality and interactivity.</p>
+            <p class="pricing"><a href="mailto:aubreymaclottey13@gmail.com" class="btn btn-primary btn-shop-demo">Buy Now</a> <a href="" class="demo">Life demo</a></p>
+            <p class="description"></p>
+          </div>
+    </article>
+</div>
 </section>
     <section id="footer">
         <div class="d-flex align-items-center-justify-content-center mt-3">
@@ -94,39 +90,41 @@
 </script>
 
 <script>
-    $(document).ready(function() {
-        $.getJSON("products.json", function(data) {
-        var productsContainer = $("#templates");
+$(document).ready(function() {
+  // Get the template index from the query string
+  var queryParams = new URLSearchParams(window.location.search);
+  var selectedTemplateId = queryParams.get("id");
 
-        data.forEach(function(product) {
-        var productElement = $("<div class='col mb-3 mb-sm-0'>");
+  if (selectedTemplateId !== null) {
+    // Convert the id to an integer
+    selectedTemplateId = parseInt(selectedTemplateId);
 
-        var productCard = $("<div class='card shop-card-v h-100'>");
-        productElement.append(productCard);   
+    // Fetch the template details using the selectedTemplateId
+    $.getJSON("products.json", function(data) {
+      var selectedTemplate = data.find(template => template.id === selectedTemplateId);
 
-        var imageElement = $("<img class='card-img-top'>").attr("src", product.img_url);
-        productCard.append(imageElement);
+      if (selectedTemplate) {
 
-        var cardBody = $("<div class='card-body product-card-body'>");
-        productCard.append(cardBody);
+        if (selectedTemplate.price == '') {
+            $('.pricing').hide();
+        }
 
-
-        cardBody.append($("<h5 class='card-title'>").text(product.name));
-
-        var cardAction = $("<div class='shop-card-action p-3'>");
-        productCard.append(cardAction);
-        cardAction.append($("<span class='ori-price'>").text(product.price));
-
-
-        var productLink = $("<a class='stretched-link'>").attr("href", product.url);
-        var demoLink = $("<a class='btn btn-primary btn-shop-demo' target='_blank'>").attr("href", product.live_demo_url).text("Live Demo");
-        cardAction.append(demoLink);
-        productCard.prepend(productLink);
-
-        productsContainer.append(productElement);
-        });
-      });
+        $(".posttitle").text(selectedTemplate.name);
+        $('.template-image').attr('src', selectedTemplate.img_url);
+        $("#static-price").text(selectedTemplate.price);
+        $("#dynamic-price").text(selectedTemplate.price_x);
+        $(".demo").attr('href', selectedTemplate.live_demo_url);
+        $(".description").text(selectedTemplate.description);
+      } else {
+        // Handle case where template with selected ID wasn't found
+      }
     });
+  } else {
+    // Handle case where no template ID was provided in the query string
+  }
+});
+
+
   </script>
 </body>
 </html>

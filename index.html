@@ -306,14 +306,18 @@
         cardAction.append($("<span class='ori-price'>").text(product.price));
 
 
-        var productLink = $("<a class='stretched-link'>").attr("href", 'template.html');
-        var demoLink = $("<a class='btn btn-primary btn-shop-demo' target='_blank'>").attr("href", product.live_demo_url).text("Live Demo");
+        var productLink = $("<a class='stretched-link template-link' data-template-index = '"+product.id+"'>").attr("href", 'template.html?id='+product.id+'');
+        var demoLink = $("<a class='btn btn-primary btn-shop-demo "+product.active+"' target='_blank'>").attr("href", product.live_demo_url).text("Live Demo");
         cardAction.append(demoLink);
         productCard.prepend(productLink);
 
         productsContainer.append(productElement);
+
+        
         });
+
       });
+
     });
   </script>
 </body>
