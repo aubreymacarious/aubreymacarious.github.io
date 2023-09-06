@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTG</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/vendors/aos/aos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body id="ClottwareApp" class="index-page app-body" data-bs-spy="scroll" data-bs-target="#navmenu" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
+<!-- HEADER -->
+<header id="header" class="header fixed-top d-flex align-items-center bg-sm">
+    <div class="container d-flex align-items-center justify-content-between">
+        <!-- App identity -->
+        <div class="d-flex align-items-center">
+          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <svg width="297" height="121" viewBox="0 0 297 121" fill="none" xmlns="http://www.w3.org/2000/svg" class="white-logo">
+              <path d="M19.8959 82.7931L24.383 76.3848L12.2475 67.8875L24.9801 49.7034L41.4933 61.2661L46.057 54.7483L41.8669 51.6511L50.155 39.5786L43.6163 35.0001L35.1406 47.1045L22.8389 38.4908L1.05541 69.6008L19.8959 82.7931Z" fill="white"/>
+              <path d="M34.224 74.9499L21.7561 66.2197L26.4349 59.5376L38.7367 68.1514L41.613 64.0435L48.4288 68.816L37.0385 85.0831L55.4357 97.9649L63.8346 85.97L70.4842 90.6261L57.5215 109.139L25.8251 86.9448L34.224 74.9499Z" fill="white"/>
+              <path d="M53.7379 88.1239L47.0329 83.429L55.5086 71.3246L51.2972 68.3757L55.976 61.6936L72.4892 73.2562L85.0684 55.2913L72.9883 46.8327L77.5904 40.2602L96.4863 53.4912L74.7412 84.5465L62.3286 75.8551L53.7379 88.1239Z" fill="white"/>
+              <path d="M70.6593 63.486L58.4684 54.9498L55.592 59.0576L48.7762 54.2851L60.2049 37.9633L41.9185 25.1591L33.5196 37.154L26.9254 32.5367L40.0032 13.8597L71.4779 35.8985L63.0023 48.003L75.4148 56.6943L70.6593 63.486Z" fill="white"/>
+              <path d="M19.8959 82.7931L24.383 76.3848L12.2475 67.8875L24.9801 49.7034L41.4933 61.2661L46.057 54.7483L41.8669 51.6511L50.155 39.5786L43.6163 35.0001L35.1406 47.1045L22.8389 38.4908L1.05541 69.6008L19.8959 82.7931Z" stroke="white"/>
+              <path d="M34.224 74.9499L21.7561 66.2197L26.4349 59.5376L38.7367 68.1514L41.613 64.0435L48.4288 68.816L37.0385 85.0831L55.4357 97.9649L63.8346 85.97L70.4842 90.6261L57.5215 109.139L25.8251 86.9448L34.224 74.9499Z" stroke="white"/>
+              <path d="M53.7379 88.1239L47.0329 83.429L55.5086 71.3246L51.2972 68.3757L55.976 61.6936L72.4892 73.2562L85.0684 55.2913L72.9883 46.8327L77.5904 40.2602L96.4863 53.4912L74.7412 84.5465L62.3286 75.8551L53.7379 88.1239Z" stroke="white"/>
+              <path d="M70.6593 63.486L58.4684 54.9498L55.592 59.0576L48.7762 54.2851L60.2049 37.9633L41.9185 25.1591L33.5196 37.154L26.9254 32.5367L40.0032 13.8597L71.4779 35.8985L63.0023 48.003L75.4148 56.6943L70.6593 63.486Z" stroke="white"/>
+              <path d="M111.898 96V29.184H126.97V96H111.898ZM90.6822 41.376V28.224H148.186V41.376H90.6822ZM170.867 96V29.184H185.939V96H170.867ZM149.651 41.376V28.224H207.155V41.376H149.651ZM243.977 97.056C239.049 97.056 234.409 96.16 230.057 94.368C225.769 92.576 222.025 90.112 218.825 86.976C215.625 83.776 213.097 80.064 211.241 75.84C209.449 71.552 208.553 66.944 208.553 62.016C208.553 57.088 209.481 52.512 211.337 48.288C213.193 44.064 215.753 40.384 219.017 37.248C222.345 34.048 226.217 31.584 230.633 29.856C235.049 28.064 239.785 27.168 244.841 27.168C250.665 27.168 255.945 28.224 260.681 30.336C265.481 32.448 269.449 35.36 272.585 39.072L262.313 49.344C260.137 46.528 257.577 44.416 254.633 43.008C251.689 41.6 248.361 40.896 244.649 40.896C240.681 40.896 237.129 41.792 233.993 43.584C230.857 45.312 228.393 47.776 226.601 50.976C224.873 54.112 224.009 57.792 224.009 62.016C224.009 66.24 224.873 69.952 226.601 73.152C228.329 76.352 230.697 78.848 233.705 80.64C236.713 82.432 240.169 83.328 244.073 83.328C248.041 83.328 251.401 82.592 254.153 81.12C256.969 79.584 259.113 77.408 260.585 74.592C262.121 71.712 262.889 68.224 262.889 64.128L272.873 70.848L242.633 70.368V57.6H278.249V59.808C278.249 67.936 276.777 74.784 273.833 80.352C270.953 85.856 266.921 90.016 261.737 92.832C256.617 95.648 250.697 97.056 243.977 97.056Z" fill="white"/>
+              </svg>
+
+              <svg width="297" height="121" viewBox="0 0 296 121" fill="none" xmlns="http://www.w3.org/2000/svg" class="black-logo">
+                <path d="M18.8959 82.7931L23.383 76.3848L11.2475 67.8875L23.9801 49.7034L40.4933 61.2661L45.057 54.7483L40.8669 51.6511L49.155 39.5786L42.6163 35.0001L34.1406 47.1045L21.8389 38.4908L0.0554132 69.6008L18.8959 82.7931Z" fill="#111111"/>
+                <path d="M33.224 74.9499L20.7561 66.2197L25.4349 59.5376L37.7367 68.1514L40.613 64.0435L47.4288 68.816L36.0385 85.0831L54.4357 97.9649L62.8346 85.97L69.4842 90.6261L56.5215 109.139L24.8251 86.9448L33.224 74.9499Z" fill="#111111"/>
+                <path d="M52.7379 88.1239L46.0329 83.429L54.5086 71.3246L50.2972 68.3757L54.976 61.6936L71.4892 73.2562L84.0684 55.2913L71.9883 46.8327L76.5904 40.2602L95.4863 53.4912L73.7412 84.5465L61.3286 75.8551L52.7379 88.1239Z" fill="#111111"/>
+                <path d="M69.6593 63.486L57.4684 54.9498L54.592 59.0576L47.7762 54.2851L59.2049 37.9633L40.9185 25.1591L32.5196 37.154L25.9254 32.5367L39.0032 13.8597L70.4779 35.8985L62.0023 48.003L74.4148 56.6943L69.6593 63.486Z" fill="#111111"/>
+                <path d="M110.898 96V29.184H125.97V96H110.898ZM89.6822 41.376V28.224H147.186V41.376H89.6822ZM169.867 96V29.184H184.939V96H169.867ZM148.651 41.376V28.224H206.155V41.376H148.651ZM242.977 97.056C238.049 97.056 233.409 96.16 229.057 94.368C224.769 92.576 221.025 90.112 217.825 86.976C214.625 83.776 212.097 80.064 210.241 75.84C208.449 71.552 207.553 66.944 207.553 62.016C207.553 57.088 208.481 52.512 210.337 48.288C212.193 44.064 214.753 40.384 218.017 37.248C221.345 34.048 225.217 31.584 229.633 29.856C234.049 28.064 238.785 27.168 243.841 27.168C249.665 27.168 254.945 28.224 259.681 30.336C264.481 32.448 268.449 35.36 271.585 39.072L261.313 49.344C259.137 46.528 256.577 44.416 253.633 43.008C250.689 41.6 247.361 40.896 243.649 40.896C239.681 40.896 236.129 41.792 232.993 43.584C229.857 45.312 227.393 47.776 225.601 50.976C223.873 54.112 223.009 57.792 223.009 62.016C223.009 66.24 223.873 69.952 225.601 73.152C227.329 76.352 229.697 78.848 232.705 80.64C235.713 82.432 239.169 83.328 243.073 83.328C247.041 83.328 250.401 82.592 253.153 81.12C255.969 79.584 258.113 77.408 259.585 74.592C261.121 71.712 261.889 68.224 261.889 64.128L271.873 70.848L241.633 70.368V57.6H277.249V59.808C277.249 67.936 275.777 74.784 272.833 80.352C269.953 85.856 265.921 90.016 260.737 92.832C255.617 95.648 249.697 97.056 242.977 97.056Z" fill="#111111"/>
+                </svg>
+          </a>
+        <!-- /App identity -->
+        <!-- Nav -->
+        <nav id="navmenu" class="navmenu">
+            <ul>
+            <li><a href="index.html#hero" class="">Home</a></li>
+            <li><a href="index.html#about" class="">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#features">Why TTG?</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <!-- /Nav -->
+        </div>
+        <div class="nav-action d-flex flex-row-reverse">
+          <a class="btn-getstarted " href="https://ttgstaffing.wpcomstaging.com/register/">Get a Job</a>
+          <div class="d-block d-sm-none">
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </div>
+        </div>
+    </div>
+</header>
+<!-- /HEADER -->
+
+<!-- MAIN BODY -->
+<main id="main">
+    <!-- APP HERO -->
+    <section id="hero" class="hero hero-bg">
+
+        <!-- <img src="assets/images/hero-bg.jpg" alt="" data-aos="fade-in" class="aos-init aos-animate"> -->
+  
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="d-flex flex-column">
+                <div class="hero-text">
+                  <h2 data-aos="fade-up" data-aos-delay="100" class="aos-init aos-animate">Easy way to find your <span>dream jobs/talents</span> </h2>
+                  <p data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate text-sm">Fill your job in hours. Sign up for free.</p> 
+                </div>
+                <div class="hero-action">
+                  <form action="https://ttgstaffing.wpcomstaging.com/task-search/" method="GET" class="sign-up-form d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                    <input type="text" class="form-control" name="keyword" placeholder="Search jobs and talents">
+                    <input type="submit" class="btn btn-primary" value="Search">
+                  </form>
+                  <div class="mt-3 suggestion-search d-flex flex-column align-items-left">
+                      <p class="text-sm fw-bold text-white m-0">Popular search:</p>
+                      <div class="d-flex align-items-center ms-3">
+                        <p class="m-0 p-1">
+                          <a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=3d" class="text-sm text-white link-underline">3d</a>,
+                        </p>
+                        <p class="m-0 p-1">
+                          <a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=web-developemnt" class="text-sm text-white link-underline">Web development</a>,
+                        </p>
+                        <p class="m-0 p-1">
+                          <a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=writer" class="text-sm text-white link-underline">Writer</a>,
+                        </p>
+                        <p class="m-0 p-1">
+                          <a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=logo" class="text-sm text-white link-underline">Logo designer</a>
+                        </p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-lg-5 d-none d-md-block">
+              <div class="row g-4 position-relative">
+								<div class="position-absolute bg-dot primary start-0 top-0 w-25 h-25 opacity-50"></div>
+								<div class="col-6">
+									<div class="mb-4 position-relative z-1 hero-ill-1 hero-ill rounded-top-5">
+									</div>
+									<div class="position-relative z-1 hero-ill-2 hero-ill rounded-bottom-5">
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="mb-4 position-relative z-1 hero-ill-3 hero-ill rounded-end-5">
+									</div>
+									<div class="position-relative z-1 hero-ill-4 hero-ill rounded-end-5">
+									</div>
+								</div>
+								<div class="position-absolute bg-dot yellow end-0 bottom-0 w-25 h-25 opacity-50"></div>
+							</div>
+            </div>
+          </div>
+        </div>
+  
+      </section>
+    <!-- /APP HERO -->
+    <!-- Clients -->
+    <section id="clients" class="clients">
+
+      <div class="container-fluid aos-init aos-animate" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/images/clients/client-1.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/images/clients/client-2.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/images/clients/client-3.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/images/clients/client-1.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/images/clients/client-3.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/images/clients/client-2.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- About -->
+    <section id="about" class="about">
+
+      <div class="container aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-6 content">
+            <h3>About Us</h3>
+            <h2>Join World's Best Marketplace for Workers</h2>
+            <p>Welcome to the Train-to-Go (TTG) Initiative, where we help bridge the gap between talented young Ghanaians and opportunities abroad. Our mission is to provide a platform for young Ghanaians to showcase their abilities and link them to potential job opportunities in the diaspora, particularly in America. Our initiative is born out of the desire to address the growing unemployment and underemployment issues that young Ghanaians face due to the stagnant economy.</p>
+            <a href="https://ttgstaffing.wpcomstaging.com/register/" class="read-more"><span>Sign up</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center features-img-bg aos-init aos-animate d-none d-md-block" data-aos="zoom-out">
+            <img src="assets/images/about-logo.jpg" class="img-fluid" alt="">
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <section id="services" class="services">
+
+      <!--  Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>We are committed to providing our clients with tailored solutions that meet their specific needs and objectives. Whether you need a virtual assistant, a team of IT professionals, or a consultant to help you develop your business strategy, we have got you covered. </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/online-marketing.a3e9794.svg" alt="Digital Marketing" loading="lazy">
+              </div>
+              <div>
+                <h4 class="title"><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business" class="stretched-link">Marketing Services</a></h4>
+                <p class="description">Our team of marketing professionals includes digital marketing experts, social media managers, content creators, SEO specialists, PPC advertising specialists, email marketers, and branding specialists. They are equipped with the knowledge and skills to develop effective strategies that will boost your brand visibility, attract target audiences, and drive conversions. </p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/data.855fe95.svg" alt="Data" loading="lazy">
+              </div>
+              <div>
+                <h4 class="title"><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business" class="stretched-link">Tech Support Services</a></h4>
+                <p class="description">Our reliable tech support professionals comprise IT specialists, help desk technicians, remote support agents, live chat support representatives, email support specialists, and phone support professionals. They are experienced in troubleshooting technical issues, providing exceptional customer support, and ensuring smooth operations of your technology systems. </p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/writing-translation.a787f2f.svg" alt="Writing &amp; Translation" loading="lazy">
+              </div>
+              <div>
+                <h4 class="title"><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business" class="stretched-link">Writing Services</a></h4>
+                <p class="description">Captivate your audience with compelling and engaging content created by our skilled writers. Our team of writers includes content writers, copywriters, blog writers, article writers, product description writers, and marketing content creators. They possess industry-specific knowledge and expertise in crafting high-quality content that aligns with your brand voice and resonates with your target market</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/programming.6ee5a90.svg" alt="Programming &amp; Tech" loading="lazy">
+              </div>
+              <div>
+                <h4 class="title"><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business" class="stretched-link">IT Services</a></h4>
+                <p class="description">Streamline your technology infrastructure with our comprehensive IT services. Our IT professionals consist of system administrators, network engineers, software developers, database managers, cybersecurity experts, and IT project managers. With their expertise, you can trust that your IT systems will be well-managed, secure, and optimized for your business needs. </p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/business.fabc3a7.svg" alt="Business" loading="lazy">
+              </div>
+              <div>
+                <h4 class="title"><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business" class="stretched-link">Finance Services</a></h4>
+                <p class="description">Ensure your financial management is in capable hands with our experienced finance professionals. Our team includes bookkeepers, accountants, financial analysts, budgeting specialists, tax experts, and financial reporting professionals. They possess the knowledge and skills to handle your financial tasks accurately and provide valuable insights to support your decision-making</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/lifestyle.112b348.svg" alt="Lifestyle" loading="lazy">
+              </i></div>
+              <div>
+                <h4 class="title"><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business" class="stretched-link">Consulting Services</a></h4>
+                <p class="description">Our experienced consultants are ready to provide expert advice and guidance on various business areas. Whether you need assistance with process improvement, organizational development, or strategic planning, our consultants will work closely with you to understand your unique challenges and devise effective solutions. With their industry insights and strategic thinking, our consultants will help you make informed decisions and drive your business forward.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0">
+                <img src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/graphics-design.91dfe44.svg" alt="Graphics &amp; Design" loading="lazy">
+              </div>
+              <div>
+                <h4 class="title"><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business" class="stretched-link">Business Strategy</a></h4>
+                <p class="description">Navigating the complexities of today's business landscape requires a solid strategy. Our team of business strategists is well-versed in analyzing market trends, identifying growth opportunities, and developing tailored strategies to achieve your business objectives. By partnering with us, you can leverage our expertise to create a roadmap for success, enabling you to stay ahead of the competition and achieve sustainable growth.     Sign-off: Join the TTG community today and discover the wealth of talent and potential that Ghana has to offer. Let us help you find the right talent and support you need to achieve your business goals.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="features" class="features">
+
+      <!--  Section Title -->
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <h2>Why TTG?</h2>
+        <p>Working with TTG means gaining access to a pool of talented young professionals who are eager to contribute their skills and expertise to your organization</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 align-items-center features-item">
+          <div class="col-lg-5 order-2 order-lg-1 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+            <h3>Our believes</h3>
+            <p>
+              We believe that by providing the right training and exposure, we can help our graduates secure better job opportunities and ultimately improve their lives. At TTG, we identify and develop talents in various fields such as IT, marketing, customer service, finance, and more. We offer comprehensive training to equip our graduates with the necessary skills to meet the demands of the job market. Our graduates are driven, devoted, and ready to contribute to the growth of any organization they work with. 
+            </p>
+            <a href="https://ttgstaffing.wpcomstaging.com/register/" class="btn btn-get-started">Become a seller</a>
+          </div>
+          <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center aos-init aos-animate" data-aos="zoom-out" data-aos-delay="100">
+            <img src="assets/images/features-light-1.jpg" alt="" class="img-fluid">
+          </div>
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+          <div class="col-lg-6 d-flex align-items-center features-img-bg aos-init aos-animate" data-aos="zoom-out">
+            <img src="assets/images/features-light-3.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-5 d-flex justify-content-center flex-column aos-init aos-animate" data-aos="fade-up">
+            <h3>Virtual staffing service</h3>
+            <p>Virtual staffing service: Our virtual staffing service provides businesses with access to top talent from Ghana. By outsourcing your tasks or projects to our graduates, you can increase your capacity and productivity while keeping your expenses low. Our virtual staffing service is convenient, flexible, and cost-effective, allowing you to focus on your core business functions while we handle the rest. </p>
+            <a href="https://ttgstaffing.wpcomstaging.com/register/" class="btn btn-get-started align-self-start">Post a task</a>
+          </div>
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section>
+    <section id="faq" class="faq">
+
+      <div class="container">
+
+        <div class="row flex-column gy-4">
+
+          <div class="col-lg-12 text-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <div class="content px-xl-5">
+              <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+            </div>
+          </div>
+
+          <div class="col-lg-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="faq-container">
+              <div class="faq-item faq-active">
+                <h3><span class="num">1.</span> <span>What can I sell?</span></h3>
+                <div class="faq-content">
+                  <p>Be creative! You can offer any service you wish as long as it's legal and complies with our terms. There are over 200 categories you can browse to get ideas.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">2.</span> <span>How much money can I make??</span></h3>
+                <div class="faq-content">
+                  <p>It's totally up to you. You can work as much as you want. Many sellers work on TTG full time and some keep their 9-5 job while using TTG to make extra money.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">3.</span> <span>How much does it cost?</span></h3>
+                <div class="faq-content">
+                  <p>It's free to join TTG. There is no subscription required or fees to list your services. You keep 80% of each transaction.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">4.</span> <span>How much time will I need to invest?</span></h3>
+                <div class="faq-content">
+                  <p>It's very flexible. You need to put in some time and effort in the beginning to learn the marketplace and then you can decide for yourself what amount of work you want to do.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>How do I price my service?</span></h3>
+                <div class="faq-content">
+                  <p>With Gig Packages, you set your pricing anywhere from $5 - $995 and offer three versions of your service at three different prices.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span class="num">5.</span> <span>How do I get paid??</span></h3>
+                <div class="faq-content">
+                  <p>Once you complete a buyer's order, the money is transferred to your account. No need to chase clients for payments and wait 60 or 90 days for a check.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <section class="sign-up" id="sign-up">
+      <div class="container section-title aos-init aos-animate" data-aos="fade-up">
+        <h2 class="text-md">Sign up and hire a talent or apply for a job.</h2>
+        <a href="https://ttgstaffing.wpcomstaging.com/register/" class="btn btn-primary align-self-start">Get started</a>
+      </div>
+    </section>
+</main>
+<!-- /MAIN BODY -->
+<!-- footer -->
+<footer id="footer" class="footer">
+
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-5 col-md-12 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <svg width="296" height="121" viewBox="0 0 296 121" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-logo">
+            <path d="M18.8959 82.7931L23.383 76.3848L11.2475 67.8875L23.9801 49.7034L40.4933 61.2661L45.057 54.7483L40.8669 51.6511L49.155 39.5786L42.6163 35.0001L34.1406 47.1045L21.8389 38.4908L0.0554132 69.6008L18.8959 82.7931Z" fill="#111111"/>
+            <path d="M33.224 74.9499L20.7561 66.2197L25.4349 59.5376L37.7367 68.1514L40.613 64.0435L47.4288 68.816L36.0385 85.0831L54.4357 97.9649L62.8346 85.97L69.4842 90.6261L56.5215 109.139L24.8251 86.9448L33.224 74.9499Z" fill="#111111"/>
+            <path d="M52.7379 88.1239L46.0329 83.429L54.5086 71.3246L50.2972 68.3757L54.976 61.6936L71.4892 73.2562L84.0684 55.2913L71.9883 46.8327L76.5904 40.2602L95.4863 53.4912L73.7412 84.5465L61.3286 75.8551L52.7379 88.1239Z" fill="#111111"/>
+            <path d="M69.6593 63.486L57.4684 54.9498L54.592 59.0576L47.7762 54.2851L59.2049 37.9633L40.9185 25.1591L32.5196 37.154L25.9254 32.5367L39.0032 13.8597L70.4779 35.8985L62.0023 48.003L74.4148 56.6943L69.6593 63.486Z" fill="#111111"/>
+            <path d="M110.898 96V29.184H125.97V96H110.898ZM89.6822 41.376V28.224H147.186V41.376H89.6822ZM169.867 96V29.184H184.939V96H169.867ZM148.651 41.376V28.224H206.155V41.376H148.651ZM242.977 97.056C238.049 97.056 233.409 96.16 229.057 94.368C224.769 92.576 221.025 90.112 217.825 86.976C214.625 83.776 212.097 80.064 210.241 75.84C208.449 71.552 207.553 66.944 207.553 62.016C207.553 57.088 208.481 52.512 210.337 48.288C212.193 44.064 214.753 40.384 218.017 37.248C221.345 34.048 225.217 31.584 229.633 29.856C234.049 28.064 238.785 27.168 243.841 27.168C249.665 27.168 254.945 28.224 259.681 30.336C264.481 32.448 268.449 35.36 271.585 39.072L261.313 49.344C259.137 46.528 256.577 44.416 253.633 43.008C250.689 41.6 247.361 40.896 243.649 40.896C239.681 40.896 236.129 41.792 232.993 43.584C229.857 45.312 227.393 47.776 225.601 50.976C223.873 54.112 223.009 57.792 223.009 62.016C223.009 66.24 223.873 69.952 225.601 73.152C227.329 76.352 229.697 78.848 232.705 80.64C235.713 82.432 239.169 83.328 243.073 83.328C247.041 83.328 250.401 82.592 253.153 81.12C255.969 79.584 258.113 77.408 259.585 74.592C261.121 71.712 261.889 68.224 261.889 64.128L271.873 70.848L241.633 70.368V57.6H277.249V59.808C277.249 67.936 275.777 74.784 272.833 80.352C269.953 85.856 265.921 90.016 260.737 92.832C255.617 95.648 249.697 97.056 242.977 97.056Z" fill="#111111"/>
+            </svg>
+            
+        </a>
+        <p>Train-to-Go</p>
+        <div class="social-links d-flex mt-4">
+          <a href=""><i class="bi bi-twitter"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/">Terms of service</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/">Privacy policy</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-2 col-6 footer-links">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business">Marketing</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business">Tech Support</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business">Writing</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business">Financial</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business">Consulting</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business">Business Strategy</a></li>
+          <li><a href="https://ttgstaffing.wpcomstaging.com/task-search/?category=business">IT Service</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>A108 Adam Street</p>
+        <p>New York, NY 535022</p>
+        <p>United States</p>
+        <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+        <p><strong>Email:</strong> <span>info@example.com</span></p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1">TTG</strong> <span>All Rights Reserved</span></p>
+  </div>
+
+</footer>
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
+    <script src="./assets/vendors/aos/aos.js"></script>
+</body>
+</html>
