@@ -854,24 +854,24 @@ body {
   }
 
   .hero-bg{
-    background-image: url("./assets/images/hero-bg.jpg");
+    background-image: url("../images/hero-bg.jpg");
     background-repeat: no-repeat;
   }
 
   .hero-ill-1{
-    background-image: url("./assets/images/freelancer-hero-1.jpg");
+    background-image: url("../images/freelancer-hero-1.jpg");
   }
 
   .hero-ill-2{
-    background-image: url("./assets/images/freelancer-hero-2.jpg");
+    background-image: url("../images/freelancer-hero-2.jpg");
   }
 
   .hero-ill-3{
-    background-image: url("./assets/images/freelancer-hero-3.jpg");
+    background-image: url("../images/freelancer-hero-3.jpg");
   }
 
   .hero-ill-4{
-    background-image: url("./assets/images/freelancer-hero-4.jpg");
+    background-image: url("../images/freelancer-hero-4.jpg");
   }
 
   .hero-ill{
