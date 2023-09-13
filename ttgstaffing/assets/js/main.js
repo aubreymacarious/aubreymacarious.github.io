@@ -42,14 +42,10 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
-    const whiteLogo = document.querySelector('.white-logo');
-    const blackLogo = document.querySelector('.black-logo');
   
     function toggleScrolled() {
       if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
       window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-      window.scrollY > 100 ? whiteLogo.style.display='none' : whiteLogo.style.display='block';
-      window.scrollY > 100 ? blackLogo.style.display='block' : blackLogo.style.display='none';
     }
   
     document.addEventListener('scroll', toggleScrolled);

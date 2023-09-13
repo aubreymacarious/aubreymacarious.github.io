@@ -21,7 +21,7 @@
     --background-color-rgb: 255, 255, 255;
     --default-color: #212529;
     --default-color-rgb: 33, 37, 41;
-    --primary-color: #e84545;
+    --primary-color: #6ed34b;
     --primary-color-rgb: 232, 69, 69;
     --secondary-color: #32353a;
     --secondary-color-rgb: 50, 53, 58;
@@ -32,9 +32,9 @@
   /* Nav Menu Colors */
   :root {
     --nav-color: #3a3939;
-    --nav-hover-color: #e84545;
+    --nav-hover-color: #6ed34b;
     --nav-dropdown-color: #3a3939;
-    --nav-dropdown-hover-color: #e84545;
+    --nav-dropdown-hover-color: #6ed34b;
     --nav-dropdown-background-color: #ffffff;
     --nav-mobile-background-color: #ffffff;
   }
@@ -270,7 +270,7 @@ body {
     --background-color: #ffffff;
     --secondary-color: #444444;
     --nav-color: #444444;
-    --nav-hover-color: #e84545;
+    --nav-hover-color: #6ed34b;
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
   }
   
@@ -289,10 +289,10 @@ body {
   /* Home Page Custom Header
   ------------------------------*/
   .index-page .header {
-    --background-color: rgba(255, 255, 255, 0);
-    --secondary-color: #ffffff;
-    --nav-color: rgba(255, 255, 255, 0.515);
-    --nav-hover-color: #ffffff;
+    --background-color: rgba(255, 255, 255);
+    --secondary-color: #444444;
+    --nav-color: #9e9b9b;
+    --nav-hover-color: #000;
   }
   
   /* Home Page Custom Header on page scroll
@@ -300,8 +300,8 @@ body {
   .index-page.scrolled .header {
     --background-color: #ffffff;
     --secondary-color: #444444;
-    --nav-color: #444444;
-    --nav-hover-color: #d83535;
+    --nav-color: #9e9b9b;
+    --nav-hover-color: #000;
   }
   
   /*--------------------------------------------------------------
