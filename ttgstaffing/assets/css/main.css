@@ -21,8 +21,8 @@
     --background-color-rgb: 255, 255, 255;
     --default-color: #212529;
     --default-color-rgb: 33, 37, 41;
-    --primary-color: #6ed34b;
-    --primary-color-rgb: 98, 192, 66;
+    --primary-color: #339ECF;
+    --primary-color-rgb: 22, 120, 165;
     --secondary-color: #32353a;
     --secondary-color-rgb: 50, 53, 58;
     --contrast-color: #ffffff;
@@ -32,9 +32,9 @@
   /* Nav Menu Colors */
   :root {
     --nav-color: #3a3939;
-    --nav-hover-color: #6ed34b;
+    --nav-hover-color: #339ECF;
     --nav-dropdown-color: #3a3939;
-    --nav-dropdown-hover-color: #6ed34b;
+    --nav-dropdown-hover-color: #339ECF;
     --nav-dropdown-background-color: #ffffff;
     --nav-mobile-background-color: #ffffff;
   }
@@ -270,7 +270,7 @@ body {
     --background-color: #ffffff;
     --secondary-color: #444444;
     --nav-color: #444444;
-    --nav-hover-color: #6ed34b;
+    --nav-hover-color: #339ECF;
     box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
   }
   
